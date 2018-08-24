@@ -12,9 +12,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 @NgModule({
   declarations: [
     MyApp,
-    ListPage,
-    HomePage
 
+    HomePage,
+    ListPage
   ],
   imports: [
     BrowserModule,

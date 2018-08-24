@@ -12,7 +12,7 @@ log.txt
 .vscode/
 npm-debug.log*
 
-app.module.ts
+src/app/app.module.ts
 
 .idea/
 .ionic/
