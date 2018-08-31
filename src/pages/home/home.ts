@@ -19,11 +19,15 @@ export class HomePage {
     this.menu.swipeEnable(false);
   }
 
-  ionViewDidLeave(){
+  ionViewWillLeave(){
     this.menu.swipeEnable(true);
   }
 
   login() {
     this.navCtrl.setRoot('DashboardPage');
+  }
+
+  onSignup() {
+    this.navCtrl.push('SingupPage');
   }
 }
