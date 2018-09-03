@@ -4,19 +4,19 @@
   <h4>Acessar Agenda</h4>
   <img src="assets/imgs/logo_agenda.png" alt="logo">
 
-  <form>
+  <form [formGroup]="loginForm" (ngSubmit)="login(); $event.preventDefault()">
     <ion-item>
       <ion-label stacked>E-mail</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input type="text" formControlName="email"></ion-input>
     </ion-item>
 
     <ion-item>
       <ion-label stacked>Senha</ion-label>
-      <ion-input type="password"></ion-input>
+      <ion-input type="password" formControlName="senha"></ion-input>
     </ion-item>
 
     <br>
-    <button ion-button block (click)="login()">Entrar</button>
+    <button ion-button block (click)="login()" [disabled]="loginForm.invalid">Entrar</button>
   </form>
 
   <button ion-button block outline (click)="onSignup()">Registrar-se</button>
